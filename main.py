@@ -15,7 +15,10 @@ def seed_torch(seed):
 
 
 def main():
-    env = UnityEnvironment(file_name="TennisEnvironment/Tennis.app")
+    # env = UnityEnvironment(file_name="TennisEnvironment/Tennis.app")
+    # instead of using mac, we are using win11, and different path
+    env = UnityEnvironment(file_name="TennisEnvironment/Tennis_Windows_x86_64/Tennis_Windows_x86_64/Tennis.exe")
+
     seed = 777
     np.random.seed(seed)
     seed_torch(seed)
